@@ -1,0 +1,30 @@
+# fonksiyon ismini belirtir.
+* tablo ismini belirtir.
+
+
+#get_imo_list:
+	Marinetraffic'den istenen konumlara göre arama yaparak bulduğu gemlerin IMO'larını içeren bir dizi geriye döndürecek.
+	
+#login_equasis:
+	Equasis'e giriş yaparak session bilgilerini tutacak.
+
+#get_ship_info:(IMO numarası)
+	#login_equasis tarafından sağlanan session ile sitede arama yapacak. Bilgileri yerel bir dosyada saklayacak.
+	
+#send_mail:
+	Belirtilen IMO'ya ait mail adreslerine uygunluk kontrolü yaptıktan sonra mail yollayacak. 
+	Kontrolü geçemeyenleri *mail_error tablosunda toplayacak.
+	
+#if_record_exist:(IMO numarası)
+	IMO *ship_list tablosunda kayıtlı mı kontrol edecek, duruma göre true veya false değer döndürecek.
+	
+#add_record:(Class type)
+	IMO kayıtlı olmadığı takdirde Equasis'den çekilen bilgilerle beraber *ship_list tablosuna ekleyecek.
+	
+#remove_record:(IMO numarası)
+	IMO'ya ait kaydı/kayıtları silecek.
+	
+#if_date_expired:(IMO numarası)
+	Son atılan mailin üzerinden geçen zamanı hesaplayacak.
+	Tekrar atılması gerekip gerekmediğine karar verecek, ve gerekmiyorsa IMO'yu listeden çıkartacak.
+	
